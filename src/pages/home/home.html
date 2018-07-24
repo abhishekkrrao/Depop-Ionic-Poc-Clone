@@ -1,0 +1,56 @@
+<ion-content no-padding>
+  <div>
+      <ion-grid>
+          <ion-row>
+              <ion-col col-4 *ngFor="let s of [200,201,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,222,223,224,225,226,227,228,229,230]">
+                           
+                      <img (click)="openPages(s)" src="https://picsum.photos/{{s}}">
+          
+               
+      
+              </ion-col> 
+      
+          </ion-row>
+      </ion-grid> 
+    </div>
+    <div>
+        <ion-row class="col-1" (click)="openPage()">
+            <ion-card-content>
+                      <div>
+                        <h6 ion-text color="light">CONTINUE WITH FACEBOOK </h6>
+                      </div>
+            </ion-card-content>
+        </ion-row>
+    </div>
+
+    <div>
+        <ion-row class="col-2" (click)="gotoSignup()">
+            <ion-card-content>
+              <div>
+                <h6 ion-text color="light"> Sign Up </h6>
+              </div>
+                </ion-card-content>
+        </ion-row>
+     </div>
+
+     <div>
+   
+        <ion-row class="col-3" (click)="gotoLogin($event)">
+            <ion-card-content>
+              <div>
+                <h6 ion-text color="dark"> Log In </h6>
+              </div>
+                </ion-card-content>
+        </ion-row>
+        </div>
+
+
+</ion-content>
+
+
+
+<ion-footer no-border>
+    <ion-toolbar>
+      <button class="bgblack" ion-button (click)="openPage($event)"  full>Explore</button>
+    </ion-toolbar>
+  </ion-footer>

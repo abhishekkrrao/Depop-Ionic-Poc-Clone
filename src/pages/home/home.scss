@@ -1,0 +1,100 @@
+page-home {
+    .col-1
+    {
+        position: fixed;
+        margin-top: 120px;
+        background: #0415cc;
+        height: 85px;
+        width: 450px;
+       font-size: 10px;
+       z-index: 20;
+        top: 0px;
+        left: 0;
+    
+    }
+
+
+
+    .col-2
+    {
+        margin-top: 205px;
+        position: fixed;
+        background: #cc0404;
+        height: 85px;
+        width: 450px;
+        font-size: 10px;
+        z-index: 20;
+        top: 0px;
+        left: 0;
+    }
+    .col-3
+    {
+        position: fixed;
+        margin-top: 290px;
+        background: #ffffff;
+        height: 85px;
+        width: 450px;
+       font-size: 10px;
+       z-index: 20;
+        top: 0px;
+        left: 0;
+    
+    }
+
+    .my-overlay {
+        position: fixed;
+        height: 85px;
+        width: 300px;
+        z-index: 20;
+        top: 0px;
+        left: 0;
+      }
+
+      .my-overlay1 {
+        position: fixed;
+        height: 85px;
+        width: 300px;
+        z-index: 20;
+        top: 185px;
+        left: 0;
+      }
+      .my-overlay2 {
+        position: fixed;
+        height: 85px;
+        width: 300px;
+        z-index: 20;
+        top: 255px;
+        left: 0;
+      }
+      
+    .divcolor{
+        color: white;
+    }
+    .div {
+        background:grey;
+        float: left;
+        margin:1%;
+    }
+    .gridbg
+    {
+        color: #000; 
+        background: #000;
+      
+    }
+    .itemIconColor
+    {
+        color: #ffffff;
+    }
+    .textbg
+    {
+        background: #ffffff;
+    }
+
+    .bgblack
+    {
+    background: #000000;
+    color: #ffffff;
+    
+    }
+   
+}

@@ -1,0 +1,12 @@
+<ion-content padding>
+
+    <ion-card>
+        <ion-card-content>
+          <button (click)="onTakePicture()">Take a Picture</button>
+          Latest Picture:
+          <img *ngIf="image" [src]="image" />
+        </ion-card-content>
+      </ion-card>
+
+      
+</ion-content>
