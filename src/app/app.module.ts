@@ -17,6 +17,7 @@ import { CameraPage } from '../pages/camera/camera';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { Camera } from '@ionic-native/camera';
 import { SingleviewPage } from '../pages/singleview/singleview';
+import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { SingleviewPage } from '../pages/singleview/singleview';
     SplashScreen,
     AndroidPermissions,
     Camera,
+    NativePageTransitions,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
