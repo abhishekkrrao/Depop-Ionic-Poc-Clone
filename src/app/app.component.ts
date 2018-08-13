@@ -1,39 +1,76 @@
-import { Component } from '@angular/core';
-import { Platform  } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, Nav  } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
-import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { timer } from 'rxjs/observable/timer';
+import { NativeStorage } from '@ionic-native/native-storage';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
-  showSplash = true; 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,public  androidPermissions: AndroidPermissions) {
-    platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
-      splashScreen.hide();
+  
+  @ViewChild(Nav) nav: Nav;
+  rootPage: any;
+  message:string;
+  showSplash = true;
+
+  email:string;
+  pass:string;
+
+
+  constructor(public nativeStorage:NativeStorage,public platform: Platform,public statusBar: StatusBar,public splashScreen: SplashScreen) {
+
+    this.initializeApp();
+    
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
       timer(3000).subscribe(() => this.showSplash = false)
-      //let splash = modalCtrl.create(SplashPage);
-     // splash.present();
-     if (window.hasOwnProperty("cordova")) {
-      this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.CAMERA).then(
-        result => console.log('Has permission?',result.hasPermission),
-        err => this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.CAMERA)
-      );
-      
-      this.androidPermissions.requestPermissions([this.androidPermissions.PERMISSION.CAMERA, this.androidPermissions.PERMISSION.GALLERY]);
 
-     }
+      this.getMyName();
 
+     
 
 
     });
   }
+
+
+
+  public getMyName() :  void {
+    this.nativeStorage.getItem('my-identity-card')
+  . then (
+      data  => {
+
+       
+        this.email  =  data.email ;
+        this.pass  =   data.pass ;
+    
+        if(this.email!=null && this.email.length>0)
+        {
+      
+          this.rootPage = TabsPage;
+        }
+        else
+        {
+          this.rootPage = HomePage;
+        }
+        
+      },
+      error  =>  {
+     
+        this.rootPage = HomePage;
+      }
+    );
+
+  }
+
+
 }
 
