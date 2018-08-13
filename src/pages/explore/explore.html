@@ -7,12 +7,45 @@
 <ion-content no-padding class="maincontent">
   <ion-list>
     <ion-card class="maincontent" no-padding>
-       <ion-card-content>
-          <ion-item>
 
+           <ion-item>
+                 <ion-avatar item-start>
+                    <img src="assets/imgs/adidas.png"/>
+                  </ion-avatar>
+                     <h2>Cher</h2>
+                    <p>Ugh. As if.</p>
+                    <ion-avatar item-end>
+                        <img src="assets/imgs/menuopen.png"/>
+                     </ion-avatar>
+            </ion-item>
 
-          </ion-item>
-      </ion-card-content>
+            <ion-item>
+                 <img src="assets/imgs/adidas.png" class="maincontent"/>
+            </ion-item>
+           <ion-item>
+            <ion-row class="maincontent" no-padding>
+              <ion-col class="maincontent" no-padding>
+                <ion-icon name="heart-outline"></ion-icon>
+              </ion-col>
+              <ion-col no-padding>
+                <ion-icon name="home"></ion-icon>
+              </ion-col>
+              <ion-col no-padding>
+                <ion-icon name="bookmark"></ion-icon>
+              </ion-col>
+              <ion-col no-padding>
+                <ion-icon name="mail"></ion-icon>
+              </ion-col>
+              <ion-col no-padding>     
+                <ion-buttons end>
+                  <button ion-button icon-only (tap)="clearApp($event)">
+                    <h6>Buy</h6>
+                  </button>
+                </ion-buttons>
+              </ion-col>
+            </ion-row>
+           </ion-item>
+    
     </ion-card>
   </ion-list>
 </ion-content>

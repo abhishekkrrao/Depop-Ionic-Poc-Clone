@@ -18,6 +18,14 @@ import { CameraPageModule } from '../pages/camera/camera.module';
 import { SingleviewPageModule } from '../pages/singleview/singleview.module';
 import { TabsPageModule } from '../pages/tabs/tabs.module';
 import { NativeStorage } from '@ionic-native/native-storage';
+import { LikesPageModule } from '../pages/likes/likes.module';
+import { NotificationPageModule } from '../pages/notification/notification.module';
+import { OptionsPageModule } from '../pages/options/options.module';
+import { PurchagedPageModule } from '../pages/purchaged/purchaged.module';
+import { SavedPageModule } from '../pages/saved/saved.module';
+import { SellingPageModule } from '../pages/selling/selling.module';
+import { ReceiptsPageModule } from '../pages/receipts/receipts.module';
+import { SoldPageModule } from '../pages/sold/sold.module';
 
 
 @NgModule({
@@ -36,6 +44,14 @@ import { NativeStorage } from '@ionic-native/native-storage';
     PersonPageModule,
     CameraPageModule,
     SingleviewPageModule,
+    LikesPageModule,
+    NotificationPageModule,
+    OptionsPageModule,
+    PurchagedPageModule,
+    SavedPageModule,
+    SellingPageModule,
+    ReceiptsPageModule,
+    SoldPageModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
